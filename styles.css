@@ -1,0 +1,124 @@
+/* Reset CSS */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* Body styles */
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Navigation bar styles */
+    .nav-bar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      height: 40px;
+      background-color: #232946;
+    }
+    
+    .name {
+      font-size: 18px;
+      color: #fffffe;
+      text-transform: uppercase;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #fffffe;
+    }
+    
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 18px;
+      width: 40%;
+    }
+    
+    .icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 15%;
+    }
+    
+    /* Hamburger menu styles */
+    .menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #cb8a11;
+      padding: 10px 0;
+      text-align: center;
+    }
+    
+    .menu-item {
+      margin-bottom: 10px;
+    }
+    
+    .menu-item a {
+      color: #fffffe;
+    }
+    
+    .menu-item a:hover {
+      text-decoration: underline;
+    }
+    
+    .hamburger-icons {
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .menu-toggle {
+      color: white;
+      display: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .menu-toggle .fa-bars {
+      font-size: 24px;
+    }
+    
+    /* Media query for smaller screens */
+    @media screen and (max-width: 720px) {
+      .nav-links,
+      .icons {
+        display: none;
+      }
+    
+      .menu-toggle {
+        display: block;
+      }
+    
+      .menu-open {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative; 
+      }
+    
+      .menu-open .hamburger-icons {
+        display: flex;
+      }
+    
+      .menu-open .menu {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+    
